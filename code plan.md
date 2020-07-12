@@ -1,0 +1,4 @@
+- use angular js
+- create component contact-card
+- create component chat-list-item which will have contact-card in it
+- create component chat-header which will have contact-card in it

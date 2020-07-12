@@ -1,0 +1,86 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(to bottom, #dbdbd2, #d1dadb);
+}
+
+.bg-top-solid-banner {
+    height: 127px;
+    background: #009688;
+}
+
+.main-parent-panel {
+    position: absolute;
+    top: 19px;
+    bottom: 19px;
+    width: 100%;
+}
+
+.main-panel {
+    background: white;
+    height: 100%;
+    width: 1400px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 1440px) {
+    .main-parent-panel {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        width: 100%;
+    }
+    .main-panel {
+        background: white;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.left-panel {
+    width: 30%;
+}
+
+.chat-panel {
+    background: green;
+    width: 70%;
+}
+
+.chat-list-header {
+    height: 39px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 16px;
+    background: #ededed;
+}
+
+.chat-list-header-image {
+    flex: 1;
+}
+
+.chat-list-header-image>img {
+    height: 100%;
+    border-radius: 50%;
+}
+
+.chat-list-header-icon {
+    width: 24px;
+    height: 24px;
+    padding: 8px;
+    margin-left: 10px;
+}
+
+.chat-list-header-icon>img {
+    width: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
