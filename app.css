@@ -84,3 +84,38 @@ body {
 .full-width {
     width: 100%;
 }
+
+.chat-search-input {
+    height: 35px;
+    background: #f6f6f6;
+    padding: 7px 13px;
+}
+
+.chat-search-input>div {
+    background: white;
+    border-radius: 1000px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.chat-search-input>div>img {
+    padding-left: 10px;
+    padding-right: 27px;
+    width: 24px;
+}
+
+.chat-search-input>div>input {
+    flex: 1;
+    border: none;
+}
+
+.chat-search-input>div>input:focus {
+    outline: none;
+}
+
+.chat-search-input>div>input::placeholder {
+    color: #c3c3c3;
+    font-size: 15px;
+    font-weight: 100;
+}
