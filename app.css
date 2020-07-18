@@ -1,121 +1,186 @@
-html, body {
-    margin: 0;
-    height: 100%;
+@font-face {
+  font-family: "Ubuntu";
+  src: url("./fonts/Ubuntu/") format("ttf");
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Ubuntu", sans-serif;
 }
 
 body {
-    background: linear-gradient(to bottom, #dbdbd2, #d1dadb);
+  background: linear-gradient(to bottom, #dbdbd2, #d1dadb);
 }
 
-.bg-top-solid-banner {
-    height: 127px;
-    background: #009688;
+.wa-bg-top-solid-banner {
+  height: 127px;
+  background: #009688;
 }
 
-.main-parent-panel {
-    position: absolute;
-    top: 19px;
-    bottom: 19px;
-    width: 100%;
+.wa-main-parent-panel {
+  position: absolute;
+  top: 19px;
+  bottom: 19px;
+  width: 100%;
 }
 
-.main-panel {
-    background: white;
-    height: 100%;
-    width: 1400px;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
+.wa-main-panel {
+  background: white;
+  height: 100%;
+  width: 1400px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
 }
 
 @media only screen and (max-width: 1440px) {
-    .main-parent-panel {
-        position: absolute;
-        top: 0px;
-        bottom: 0px;
-        width: 100%;
-    }
-    .main-panel {
-        background: white;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-    }
-}
-
-.left-panel {
-    width: 30%;
-}
-
-.chat-panel {
-    background: green;
-    width: 70%;
-}
-
-.chat-list-header {
-    height: 39px;
-    display: flex;
-    flex-direction: row;
-    padding: 10px 16px;
-    background: #ededed;
-}
-
-.chat-list-header-image {
-    flex: 1;
-}
-
-.chat-list-header-image>img {
-    height: 100%;
-    border-radius: 50%;
-}
-
-.chat-list-header-icon {
-    width: 24px;
-    height: 24px;
-    padding: 8px;
-    margin-left: 10px;
-}
-
-.chat-list-header-icon>img {
+  .wa-main-parent-panel {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
     width: 100%;
-}
-
-.full-width {
-    width: 100%;
-}
-
-.chat-search-input {
-    height: 35px;
-    background: #f6f6f6;
-    padding: 7px 13px;
-}
-
-.chat-search-input>div {
+  }
+  .wa-main-panel {
     background: white;
-    border-radius: 1000px;
-    padding: 5px;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: row;
+  }
 }
 
-.chat-search-input>div>img {
-    padding-left: 10px;
-    padding-right: 27px;
-    width: 24px;
+.wa-left-panel {
+  width: 30%;
 }
 
-.chat-search-input>div>input {
-    flex: 1;
-    border: none;
+.wa-chat-panel {
+  background: #e5ddd5;
+  width: 70%;
+  background-image: url(./images/chat-bg.png);
+  background-repeat: repeat;
+  background-blend-mode: soft-light;
 }
 
-.chat-search-input>div>input:focus {
-    outline: none;
+.wa-chat-list-header {
+  height: 39px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 16px;
+  background: #ededed;
 }
 
-.chat-search-input>div>input::placeholder {
-    color: #c3c3c3;
-    font-size: 15px;
-    font-weight: 100;
+.wa-chat-list-header-image {
+  flex: 1;
+}
+
+.wa-chat-list-header-image > img {
+  height: 100%;
+  border-radius: 50%;
+}
+
+.wa-chat-list-header-icon {
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+  margin-left: 10px;
+}
+
+.wa-chat-list-header-icon > img {
+  width: 100%;
+}
+
+.wa-full-width {
+  width: 100%;
+}
+
+.wa-chat-search-input {
+  height: 35px;
+  background: #f6f6f6;
+  padding: 7px 13px;
+}
+
+.wa-chat-search-input > div {
+  background: white;
+  border-radius: 1000px;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+}
+
+.wa-chat-search-input > div > img {
+  padding-left: 10px;
+  padding-right: 27px;
+  width: 24px;
+}
+
+.wa-chat-search-input > div > input {
+  flex: 1;
+  border: none;
+}
+
+.wa-chat-search-input > div > input:focus {
+  outline: none;
+}
+
+.wa-chat-search-input > div > input::placeholder {
+  color: #c3c3c3;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.wa-flex-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.wa-flex-col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.wa-full-flex {
+  flex: 1;
+}
+
+.wa-scroll-x {
+  overflow-x: scroll;
+}
+
+.wa-scroll-y {
+  overflow-y: scroll;
+}
+
+.wa-contact-card {
+  height: 72px;
+}
+
+.wa-contact-card-image {
+  padding: 0 15px 0 13px;
+  width: 49px;
+  height: 49px;
+  border-radius: 100%;
+  margin-top: 12px;
+}
+
+.wa-selected {
+  background: #ebebeb;
+}
+
+.wa-contact-card-title {
+  font-size: 15px;
+}
+
+.wa-contact-card-content {
+  font-size: 13px;
+  margin-top: 5px;
+  font-weight: 300;
+}
+
+.wa-contact-main {
+  padding: 15px 0;
+  border-bottom: 1px solid #ebebeb;
 }
