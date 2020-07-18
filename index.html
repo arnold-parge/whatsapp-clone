@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WhatsApp Clone</title>
 
-    <link rel="stylesheet" href="./app.css">
+    <link rel="stylesheet" href="./src/app.css">
 </head>
 
-<body>
+<body ng-app="waClone" ng-controller="mainController">
     <div class="wa-bg-top-solid-banner">&nbsp;</div>
     <div class="wa-main-parent-panel">
         <div class="wa-main-panel">
@@ -17,121 +17,35 @@
                 <div class="wa-full-width wa-flex-col">
                     <div class="wa-chat-list-header">
                         <div class="wa-chat-list-header-image">
-                            <img src="./images/pp.jpeg" alt="" srcset="">
+                            <img src="./assets/images/pp.jpeg" alt="" srcset="">
                         </div>
                         <div class="wa-chat-list-header-icon">
-                            <img src="./images/status-icon.svg" />
+                            <img src="./assets/images/status-icon.svg" />
                         </div>
                         <div class="wa-chat-list-header-icon">
-                            <img src="./images/chat-icon.svg" />
+                            <img src="./assets/images/chat-icon.svg" />
                         </div>
                         <div class="wa-chat-list-header-icon">
-                            <img src="./images/more-vert-icon.svg" />
+                            <img src="./assets/images/more-vert-icon.svg" />
                         </div>
                     </div>
                     <div class="wa-chat-search-input">
                         <div>
-                            <img src="./images/search-icon.svg" alt="" srcset="">
-                            <input type="text" placeholder="Search or start new chat">
+                            <img src="./assets/images/search-icon.svg" alt="" srcset="">
+                            <input type="text" ng-model="searchChat" placeholder="Search or start new chat">
                         </div>
                     </div>
-                    <div class="wa-full-flex wa-scroll-y">
-                        <div class="wa-contact-card wa-flex-row wa-selected">
-                            <img src="images/pp.jpeg" class="wa-contact-card-image" alt="" srcset="">
+                    <div class="wa-chat-list wa-full-flex wa-scroll-y">
+                        <div ng-repeat="contact in contacts | filter:searchChat" class="wa-contact-card wa-flex-row"
+                            ng-class="{'wa-selected': $index === selectedContact}"
+                            ng-click="selectContact($index)">
+                            <img ng-src="{{contact.image}}" class="wa-contact-card-image" alt="" srcset="">
                             <div class="wa-contact-main wa-full-flex">
                                 <div class="wa-contact-card-title">
-                                    Priscilla Jio
+                                    {{contact.name}}
                                 </div>
                                 <div class="wa-contact-card-content">
-                                    Achaa
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wa-contact-card wa-flex-row">
-                            <img src="images/pp.jpeg" class="wa-contact-card-image" alt="" srcset="">
-                            <div class="wa-contact-main wa-full-flex">
-                                <div class="wa-contact-card-title">
-                                    Priscilla Jio
-                                </div>
-                                <div class="wa-contact-card-content">
-                                    Achaa
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wa-contact-card wa-flex-row">
-                            <img src="images/pp.jpeg" class="wa-contact-card-image" alt="" srcset="">
-                            <div class="wa-contact-main wa-full-flex">
-                                <div class="wa-contact-card-title">
-                                    Priscilla Jio
-                                </div>
-                                <div class="wa-contact-card-content">
-                                    Achaa
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wa-contact-card wa-flex-row">
-                            <img src="images/pp.jpeg" class="wa-contact-card-image" alt="" srcset="">
-                            <div class="wa-contact-main wa-full-flex">
-                                <div class="wa-contact-card-title">
-                                    Priscilla Jio
-                                </div>
-                                <div class="wa-contact-card-content">
-                                    Achaa
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wa-contact-card wa-flex-row">
-                            <img src="images/pp.jpeg" class="wa-contact-card-image" alt="" srcset="">
-                            <div class="wa-contact-main wa-full-flex">
-                                <div class="wa-contact-card-title">
-                                    Priscilla Jio
-                                </div>
-                                <div class="wa-contact-card-content">
-                                    Achaa
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wa-contact-card wa-flex-row">
-                            <img src="images/pp.jpeg" class="wa-contact-card-image" alt="" srcset="">
-                            <div class="wa-contact-main wa-full-flex">
-                                <div class="wa-contact-card-title">
-                                    Priscilla Jio
-                                </div>
-                                <div class="wa-contact-card-content">
-                                    Achaa
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wa-contact-card wa-flex-row">
-                            <img src="images/pp.jpeg" class="wa-contact-card-image" alt="" srcset="">
-                            <div class="wa-contact-main wa-full-flex">
-                                <div class="wa-contact-card-title">
-                                    Priscilla Jio
-                                </div>
-                                <div class="wa-contact-card-content">
-                                    Achaa
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wa-contact-card wa-flex-row">
-                            <img src="images/pp.jpeg" class="wa-contact-card-image" alt="" srcset="">
-                            <div class="wa-contact-main wa-full-flex">
-                                <div class="wa-contact-card-title">
-                                    Priscilla Jio
-                                </div>
-                                <div class="wa-contact-card-content">
-                                    Achaa
-                                </div>
-                            </div>
-                        </div>
-                        <div class="wa-contact-card wa-flex-row">
-                            <img src="images/pp.jpeg" class="wa-contact-card-image" alt="" srcset="">
-                            <div class="wa-contact-main wa-full-flex">
-                                <div class="wa-contact-card-title">
-                                    Priscilla Jio
-                                </div>
-                                <div class="wa-contact-card-content">
-                                    Achaa
+                                    {{contact.lastMessage}}
                                 </div>
                             </div>
                         </div>
@@ -141,6 +55,8 @@
             <div class="wa-chat-panel">&nbsp;</div>
         </div>
     </div>
+    <script src="./libs/angular.min.js"></script>
+    <script src="./src/app.js"></script>
 </body>
 
 </html>
