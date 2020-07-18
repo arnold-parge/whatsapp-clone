@@ -1,6 +1,6 @@
 var waClone = angular.module('waClone', []);
 
-angular.module('waClone').controller('mainController', mainController);
+waClone.controller('mainController', mainController);
 
 mainController.$inject = ['$scope'];
 

@@ -14,6 +14,18 @@ body {
   background: linear-gradient(to bottom, #dbdbd2, #d1dadb);
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cccccc;
+}
+
 .wa-bg-top-solid-banner {
   height: 127px;
   background: #009688;
@@ -192,18 +204,4 @@ body {
 
 .wa-chat-list {
   border: 1px solid #dbdbdb;
-}
-
-.wa-chat-list::-webkit-scrollbar {
-  width: 6px;
-}
-
-
-.wa-chat-list::-webkit-scrollbar-track {
-  background: white;
-}
-
-
-.wa-chat-list::-webkit-scrollbar-thumb {
-  background: #cccccc;
 }
