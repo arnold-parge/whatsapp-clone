@@ -38,7 +38,7 @@
                     </div>
                     <div class="wa-chat-list wa-full-flex wa-scroll-y">
                         <div ng-repeat="contact in contacts | filter:searchChat" ng-click="selectContact($index)">
-                            <contact-card contact="contact" is-selected="selectedContact === $index" />
+                            <chat-list-item contact="contact" is-selected="selectedContact === $index" />
                         </div>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
     </div>
     <script src="./libs/angular.min.js"></script>
     <script src="./src/app.js"></script>
-    <script src="./src/components/contact-cards/contact-cards.js"></script>
+    <script src="./src/components/chat-list-items/chat-list-items.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,23 @@
+<div class="wa-chat-list-item wa-flex-row" ng-class="{'wa-selected': $ctrl.isSelected}">
+    <img ng-src="{{$ctrl.contact.image}}" class="wa-chat-list-item-image" alt="" srcset="">
+    <div class="wa-contact-main wa-full-flex">
+        <div class="wa-flex-row">
+            <div class="wa-chat-list-item-title wa-full-flex">
+                {{$ctrl.contact.name}}
+            </div>
+            <div style="color: #00000073; font-size: 12px">
+                10:34 AM
+            </div>
+        </div>
+        <div class="wa-flex-row" style="height: 23px;">
+            <div class="wa-chat-list-item-content wa-full-flex">
+                {{$ctrl.contact.lastMessage}}
+            </div>
+            <div ng-if="$ctrl.contact.unread" class="wa-unread-badge">
+                <span class="wa-unread-count">
+                    {{$ctrl.contact.unread}}
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
