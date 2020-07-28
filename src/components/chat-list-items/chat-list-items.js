@@ -4,4 +4,5 @@ angular.module('waClone').component('chatListItem', {
         contact: '<',
         isSelected: '<'
     },
+    controllerAs: 'vm'
 });
