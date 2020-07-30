@@ -70,7 +70,7 @@ body {
 .wa-chat-panel {
   background: #e5ddd5;
   width: 70%;
-  background-image: url(./static/assets/images/chat-bg.png);
+  background-image: url(/static/assets/images/chat-bg.png);
   background-repeat: repeat;
   background-blend-mode: soft-light;
 }
