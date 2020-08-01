@@ -2,9 +2,16 @@ var waClone = angular.module('waClone', []);
 
 waClone.controller('mainController', mainController);
 
-mainController.$inject = ['$scope'];
+mainController.$inject = ['$scope', '$timeout', 'ChatSvc'];
 
-function mainController($scope) {
+function mainController($scope, $timeout, ChatSvc) {
+
+    ChatSvc.messageToClient();
+
+    $timeout(function () {
+        ChatSvc.messageFromServer();
+    }, 5000);
+
     $scope.selectedContact;
     $scope.contacts = [
         {
