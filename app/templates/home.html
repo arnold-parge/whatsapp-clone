@@ -11,51 +11,51 @@
 </head>
 
 <body ng-app="waClone" ng-controller="mainController">
-    <div class="wa-bg-top-solid-banner">&nbsp;</div>
-    <div class="wa-main-parent-panel">
-        <div class="wa-main-panel">
-            <div class="wa-left-panel">
-                <div class="wa-full-width wa-flex-col">
-                    <div class="wa-chat-list-header">
-                        <div class="wa-chat-list-header-image">
-                            <img src="/static/assets/images/pp.jpeg" alt="" srcset="">
-                        </div>
-                        <div class="wa-chat-list-header-icon">
-                            <img src="/static/assets/images/status-icon.svg" />
-                        </div>
-                        <div class="wa-chat-list-header-icon">
-                            <img src="/static/assets/images/chat-icon.svg" />
-                        </div>
-                        <div class="wa-chat-list-header-icon">
-                            <img src="/static/assets/images/more-vert-icon.svg" />
-                        </div>
+<div class="wa-bg-top-solid-banner">&nbsp;</div>
+<div class="wa-main-parent-panel">
+    <div class="wa-main-panel">
+        <div class="wa-left-panel">
+            <div class="wa-full-width wa-flex-col">
+                <div class="wa-chat-list-header">
+                    <div class="wa-chat-list-header-image">
+                        <img src="/static/assets/images/pp.jpeg" alt="" srcset="">
                     </div>
-                    <chat-search query="searchChat"></chat-search>
-                    <div class="wa-chat-list wa-full-flex wa-scroll-y">
-                        <chat-list-item ng-repeat="contact in contacts | filter:searchChat"
-                            ng-click="selectContact($index)" contact="contact"
-                            is-selected="selectedContact === $index" />
+                    <div class="wa-chat-list-header-icon">
+                        <img src="/static/assets/images/status-icon.svg"/>
+                    </div>
+                    <div class="wa-chat-list-header-icon">
+                        <img src="/static/assets/images/chat-icon.svg"/>
+                    </div>
+                    <div class="wa-chat-list-header-icon">
+                        <img src="/static/assets/images/more-vert-icon.svg"/>
                     </div>
                 </div>
+                <chat-search query="searchChat"></chat-search>
+                <div class="wa-chat-list wa-full-flex wa-scroll-y">
+                    <chat-list-item ng-repeat="contact in contacts | filter:searchChat"
+                                    ng-click="selectContact($index)" contact="contact"
+                                    is-selected="selectedContact === $index"></chat-list-item>
+                </div>
             </div>
-            <div class="wa-chat-panel">&nbsp;</div>
         </div>
+        <div class="wa-chat-panel">&nbsp;</div>
     </div>
+</div>
 
-    <!-- LIBS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
-    <script src="/static/libs/angular.min.js"></script>
+<!-- LIBS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script src="/static/libs/angular.min.js"></script>
 
-    <!-- MAIN APP -->
-    <script src="/static/src/app.js"></script>
+<!-- MAIN APP -->
+<script src="/static/src/app.js"></script>
 
-    <!-- SERVICES -->
-    <script src="/static/src/services/chat-svc.js"></script>
-    <script src="/static/src/services/socket-svc.js"></script>
+<!-- SERVICES -->
+<script src="/static/src/services/chat-svc.js"></script>
+<script src="/static/src/services/socket-svc.js"></script>
 
-    <!-- COMPONENTS -->
-    <script src="/static/src/components/chat-list-items/chat-list-items.js"></script>
-    <script src="/static/src/components/chat-search/chat-search.js"></script>
+<!-- COMPONENTS -->
+<script src="/static/src/components/chat-list-items/chat-list-items.js"></script>
+<script src="/static/src/components/chat-search/chat-search.js"></script>
 </body>
 
 </html>
